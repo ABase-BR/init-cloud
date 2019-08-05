@@ -1,14 +1,51 @@
 # init-cloud
 Primeiros passos na configuração de um servidor na nuvem.
 
-## Criando digital ocean
-- Criando uma instancia na digital ocean
-
 ## Antes de começar
 ### O que é
 - VPN
 - VPS
 - SSH
+
+## Criando digital ocean
+- Criando uma instancia na digital ocean
+
+### Criando Droplet
+Inicialmente temos as opções
+- Distribuições
+- Containers de distribuições
+- Marketplace
+- Backups
+- Imagem customizada
+
+Vamos escolher **distribuição** e ir para a **Ubuntu 16.04 X64**.
+
+### Escolhendo plano
+Tome cuidado com o plano, pois inicialmente ele inicia com um valor alto.
+
+Vamos usar a do tipo **Standard**.
+
+Depois a maquina de **$ 5/mo**.
+
+### Adicionando backup
+É recomendado usar o backup usado pela digital ocean, e nos ajuda realizando toda semana o backup da imagem.
+> Isso tem o valor de 1 dolar por mes.
+
+### Criando chave publica e adicionando SSH Key
+Podemos adicionar uma chave agora na criação da maquina.
+
+Vamos adicionar mais tarde uma chave na mão.
+
+#### Vamos criar uma chave
+```sh
+ssh-keygen -r rsa
+```
+
+#### Adicionando chave
+Vamos copiar a chave usando
+```sh
+cat ~/.ssh/id_rsa.pub
+```
 
 ## SSH
 ### O que é
@@ -25,10 +62,25 @@ Primeiros passos na configuração de um servidor na nuvem.
 
 ## Node
 ### O que é
-### Instalando
-- Instalando no Linux
+### Instalando no Linux
+Aqui vai um exemplo de como podemos instalar a versão **LTS** do node para:
+- Debian s2
+- Ubuntu
 
-### Instalando
+```sh
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# Using Debian, as root
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
+apt-get install -y nodejs
+```
+> Referencia: https://github.com/nodesource/distributions#deb
+
+
+
+### Como usar
 - NPM install
 - NPM run
 - NPM serve
@@ -45,17 +97,6 @@ Primeiros passos na configuração de um servidor na nuvem.
 - Inserir na inicialização do sistema
 
 
-## NGINX
-### O que é
-### Instalando
-- Instalando no Linux
-
-### Configurando
-- Criando proxy reverso
-- Servindo site estático
-
-
-
 ## PM2
 ### O que é
 ### Instalando
@@ -65,6 +106,16 @@ Primeiros passos na configuração de um servidor na nuvem.
 - Subindo projeto
 - Criando arquivo de configuração
 - Verificar se mesmo o serviço caindo ele volte usando o resurrect
+
+## NGINX
+### O que é
+### Instalando
+- Instalando no Linux
+
+### Configurando
+- Criando proxy reverso
+- Servindo site estático
+
 
 ## Resolvendo erros
 - Reiniciar servidor
