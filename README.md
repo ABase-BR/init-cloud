@@ -8,7 +8,7 @@ Primeiros passos na configuração de um servidor na nuvem.
 ### O que é
 - VPN
 - VPS
-
+- SSH
 
 ## SSH
 ### O que é
@@ -23,14 +23,15 @@ Primeiros passos na configuração de um servidor na nuvem.
 - Inserindo login por chave publica
 - Perigos de logando por senha
 
-## NGINX
+## Node
 ### O que é
 ### Instalando
 - Instalando no Linux
 
-### Configurando
-- Criando proxy reverso
-- Servindo site estático
+### Instalando
+- NPM install
+- NPM run
+- NPM serve
 
 ## Mysql
 ### O que é
@@ -43,15 +44,17 @@ Primeiros passos na configuração de um servidor na nuvem.
 - Exportar/Importar DB
 - Inserir na inicialização do sistema
 
-## Node
+
+## NGINX
 ### O que é
 ### Instalando
 - Instalando no Linux
 
-### Instalando
-- NPM install
-- NPM run
-- NPM serve
+### Configurando
+- Criando proxy reverso
+- Servindo site estático
+
+
 
 ## PM2
 ### O que é
